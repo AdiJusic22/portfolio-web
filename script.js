@@ -64,3 +64,11 @@ const typed = new Typed('.multiple-text',{
     backDelay: 1000,
     loop: true
 });
+
+/*------------Open CV end other social media-----------*/
+
+const socialLinks = document.querySelectorAll('.social-media a');
+
+socialLinks.forEach(link =>{
+    link.setAttribute('target', '_blank');
+});
