@@ -72,3 +72,6 @@ const socialLinks = document.querySelectorAll('.social-media a');
 socialLinks.forEach(link =>{
     link.setAttribute('target', '_blank');
 });
+
+/*need some functions with that buttuns */
+/*comming soon */
