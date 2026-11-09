@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Web</title>
+    <meta name="description" content="Adi Jusic's portfolio — web development, backend projects and IoT experiments.">
+    <title>Adi Jusic | Developer Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://unpkg.com/scrollreveal"></script>
 
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -14,9 +14,9 @@
     <header class="header">
         <a href="#" class="logo">Adi Jusic</a>
 
-        <i class='bx bx-menu' id="menu-icon"></i>
+        <button type="button" id="menu-icon" aria-label="Open navigation" aria-controls="primary-navigation" aria-expanded="false"><i class="bx bx-menu" aria-hidden="true"></i></button>
 
-        <nav class="navbar">
+        <nav class="navbar" id="primary-navigation" aria-label="Main navigation">
             <a href="#home" class="active">Home</a>
             <a href="#about">About</a>
             <a href="#services">Services</a>
@@ -31,7 +31,7 @@
         <div class="home-contect">
             <h3>Hello, It's me</h3>
             <h1>Adi Jusic</h1>
-            <h3>And I'm a <span class="multiple-text"></span></h3>
+            <h3>And I'm a <span class="multiple-text">Developer</span></h3>
             <p>I am passionate about continuously expanding my knowledge.
                 My goal is to grow as a full-stack developer, using every opportunity to
                 improve and contribute to meaningful projects.
@@ -46,7 +46,7 @@
         </div>
 
         <div class="home-img">
-            <img src="Images/1740404957648.jpg" alt="">
+            <img src="Images/1740404957648.jpg" alt="Adi Jusic">
         </div>  
     </section>
 
@@ -184,17 +184,18 @@
    <section class="contact" id="contact">
     <h2 class="heading">Contact <span>Me!</span></h2>
 
-    <form action="#">
+    <form id="contact-form">
         <div class="input-box">
-            <input type="text" placeholder="Full Name">
-            <input type="email" placeholder="Email Address">
+            <input type="text" name="name" placeholder="Full Name" aria-label="Full name" autocomplete="name" required>
+            <input type="email" name="email" placeholder="Email Address" aria-label="Email address" autocomplete="email" required>
         </div>
         <div class="input-box">
-            <input type="number" placeholder="Mobile Number">
-            <input type="text" placeholder="Email Subject">
+            <input type="tel" name="phone" placeholder="Mobile Number (optional)" aria-label="Mobile number (optional)" autocomplete="tel">
+            <input type="text" name="subject" placeholder="Email Subject" aria-label="Email subject" required>
         </div>
-        <textarea name="" id="" cols="" rows="" placeholder="Your Message"></textarea>
-        <input type="submit" value="Send Message" class="btn">
+        <textarea name="message" rows="6" placeholder="Your Message" aria-label="Your message" required></textarea>
+        <p class="contact-note">This form opens your email app with a prepared message. You can also <a href="mailto:adi.jusic.11@gmail.com">email me directly</a>.</p>
+        <input type="submit" value="Open Email App" class="btn">
     </form>
    </section>
 
@@ -203,19 +204,13 @@
 
     <footer class="footer">
         <div class="footer-text">
-            <p>Copyright &copy; 2025 by Adi | All Rights Reserved.</p>
+            <p>Copyright &copy; <span id="current-year">2026</span> by Adi | All Rights Reserved.</p>
         </div>
 
         <div class="footer-iconTop">
             <a href="#home"><i class='bx bx-up-arrow-circle' ></i></a>
         </div>
     </footer>
-
-    <script src="https://unpkg.com/scrollreveal"></script>
-
-    <script src="https://cdn.jsdelivr.net/nmp/typed.js@2.0.12"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-
 
     <script src="script.js"></script>
 </body>

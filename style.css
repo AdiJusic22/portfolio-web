@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com//css2?family=Poppins::wght@300;400;500;600:700:800:900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 *{
     margin: 0;
@@ -6,7 +6,6 @@
     box-sizing: border-box;
     text-decoration: none;
     border: none;
-    outline: none;
     scroll-behavior: smooth;
     font-family:'Poppins',sans-serif;
 }
@@ -71,6 +70,8 @@ h2{
 }
 
 #menu-icon{
+    background: transparent;
+    cursor: pointer;
     font-size: 3.6rem;
     color: var(--text-color);
     display: none;
@@ -171,13 +172,12 @@ span{
 
 .about-img img{
     width: 25vw;
-    width: 25vw;
     border-radius: 50%;
 }
 
 .heading{
     text-align: center;
-    font-size: 4.rem;
+    font-size: 4rem;
 }
 
 .about-content h2{
@@ -255,7 +255,7 @@ span{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     align-items: center;
-    gap: 2.rem;
+    gap: 2rem;
 }
 
 .portfolio-container .portfolio-box{
@@ -528,5 +528,51 @@ span{
     .footer p {
         text-align:  center;
         margin-top:  2rem;
+    }
+}
+
+/* Keyboard access and motion preferences apply throughout the existing design. */
+:focus-visible {
+    outline: 2px solid var(--main-color);
+    outline-offset: 5px;
+}
+
+section {
+    scroll-margin-top: 7rem;
+}
+
+.contact-note {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    margin-top: 1rem;
+}
+
+.contact-note a {
+    color: var(--main-color);
+    text-decoration: underline;
+}
+
+.portfolio-box:focus-within .portfolio-layer {
+    transform: translateY(0);
+}
+
+@media (hover: none) {
+    .portfolio-box .portfolio-layer {
+        position: relative;
+        transform: none;
+        background: var(--bg-color);
+        padding: 2rem;
+    }
+
+    .portfolio-container .portfolio-box {
+        flex-direction: column;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
     }
 }
